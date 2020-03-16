@@ -9,6 +9,7 @@ pipeline {
 
     stage('Test') {
       steps {
+		sh 'mvn spring-javaformat:apply'
         sh 'mvn test'
       }
     }
