@@ -22,10 +22,10 @@ pipeline {
 
 	stage('Deploy') {
       when {
-        branch 'master'
+        expression { env.BRANCH_NAME == 'master' }
       }
       steps {
-        sh './mvnw deploy'
+        sh 'mvn deploy'
       }
     }
 
