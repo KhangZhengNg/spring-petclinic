@@ -8,5 +8,17 @@ pipeline {
       }
     }
 
+    stage('Test') {
+      steps {
+        sh './mvnw test'
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        sh './mvnw deploy'
+      }
+    }
+
   }
 }
