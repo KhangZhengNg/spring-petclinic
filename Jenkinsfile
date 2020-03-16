@@ -14,7 +14,7 @@ pipeline {
       }
     }
 
-	tage('Deploy') {
+	stage('Deploy') {
       when {
         expression { env.BRANCH_NAME == 'master' }
       }
