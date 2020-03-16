@@ -25,7 +25,7 @@ pipeline {
         expression { env.BRANCH_NAME == 'master' }
       }
       steps {
-        sh 'mvn deploy'
+        sh 'mvn clean deploy releaseRepository::default::https://github.com/KhangZhengNg/spring-petclinic'
       }
     }
 
