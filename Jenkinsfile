@@ -14,9 +14,12 @@ pipeline {
       }
     }
 
-    stage('Deploy') {
+	tage('Deploy') {
+      when {
+        expression { env.BRANCH_NAME == 'master' }
+      }
       steps {
-        sh './mvnw deploy'
+        sh 'mvn deploy'
       }
     }
 
