@@ -331,6 +331,5 @@
 	  <url>https://github.com/KhangZhengNg/spring-petclinic</url>
       <layout>default</layout>
     </repository>
-    ...
 </distributionManagement>
 </project>
