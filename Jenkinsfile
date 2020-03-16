@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh './mvnw package'
+        sh '''./mvnw spring-javaformat:apply
+./mvnw package'''
       }
     }
 
